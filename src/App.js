@@ -5,9 +5,15 @@ function App() {
   let [counter, setCounter] = useState(0);
 
   const addValue = () => {
+    if (counter === 10) {
+      return;
+    }
     setCounter(counter + 1);
   };
   const removeValue = () => {
+    if (counter === 0) {
+      return;
+    }
     setCounter(counter - 1);
   };
   const resetValue = () => {
